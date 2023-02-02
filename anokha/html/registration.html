@@ -11,19 +11,18 @@
     <title>Registration</title>
     <link rel="icon" type="image/x-icon" href="../images/logo.png">
 
+    <script>
+        function validateForm() {
+            let name = document.forms["registration"]["name"].value;
+            let p1 = document.forms["registration"]["p1"].value;
+            let p2 = document.forms["registration"]["p2"].value;
 
-    <script>function Validateform() {
-            let name = document.getElementById('Name').value;
-            let p1 = document.getElementById('p1').value;
-            let p2 = document.getElementById('p2').value;
-            let mail = document.getElementById('email').value;
-            var validRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
             if (name == "") {
-                window.alert("Name must be filled out");
+                alert("Name must be filled out");
+                return false;
             }
-            
-            if (p1.length < 8) {
+            else if (p1.length < 8) {
                 if (p1 == "") {
                     window.alert('Fill the password please!');
                 }
@@ -32,28 +31,21 @@
                 }
 
             }
-            if (p1.length > 15) {
+            else if(p1.length > 15) {
                 window.alert('Password length must not exceed 15 characters');
             }
-            if (p1 != p2) {
-                window.alert("Passwords does not match");
+            else if (p1 != p2) {
+                alert("Passwords do not match!");
                 return false;
             }
-            if (mail.value.match(validRegexp)) {
-                    
-            }
+            
             else {
-                window.alert("Invalid Email");
-            }
-            else {
-                window.alert('Registration successfull');
-                window.location = "../index.html";
-
+                alert("Registration Succesfull");
+                window.location("../index.html");
                 return true;
             }
-            
-        }</script>
-
+        }
+    </script>
     <style>
         body {
             background-image: url(../images/anokha-2019-techfest30.jpeg);
