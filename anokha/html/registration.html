@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <!--
    Author: Nithin S
@@ -10,6 +10,7 @@
     <meta charset="utf-8" />
     <title>Registration</title>
     <link rel="icon" type="image/x-icon" href="../images/logo.png">
+
 
     <script>
         function validateForm() {
@@ -46,6 +47,7 @@
             }
         }
     </script>
+
     <style>
         body {
             background-image: url(../images/anokha-2019-techfest30.jpeg);
@@ -179,7 +181,7 @@
     <form name="registration" onsubmit="return validateForm()" method="post">
 
         <h1 align="middle" style="position: relative; top:20px; color:ghostwhite;"> REGISTRATION </h1>
-        <input type="text" class="box" style="position: relative; top:20px;" name="Name" id="Name" placeholder="Name"><br>
+        <input type="text" class="box" style="position: relative; top:20px;" name="name" id="Name" placeholder="Name"><br>
         <b for="gender">Gender:</b><br>
         <div class="radio1">
             <input type="radio" name="gender" value="male"><label>Male</label>
@@ -278,12 +280,12 @@
             </select>
         </div>
 
-        <input class="box" type="email" name="email" name="email" placeholder="Email" required>
+        <input class="box" type="email" name="email" id="email" placeholder="Email" required>
 
-        <input class="box" type="Password" name="Password" name="p1" placeholder="Password">
+        <input class="box" type="Password" name="p1" id="p1" placeholder="Password">
         <span id="message" style="color:red"> </span>
 
-        <input class="box" type="Password" name="confirm password" name="p2" placeholder="Confirm Password">
+        <input class="box" type="Password" name="p2" id="p2" placeholder="Confirm Password">
 
         <div style="position:relative; top: 30px;">
 
