@@ -176,7 +176,7 @@
 <body>
 
     <h1 align="center" style="color: white; background: linear-gradient(45deg, #7b4397, #dc2430); border-radius: 13px; ">ANOKHA <font style="color:black"> 2023 </font></h1>
-    <form name="registration" onsubmit="return Validateform()" method="post">
+    <form name="registration" onsubmit="return validateForm()" method="post">
 
         <h1 align="middle" style="position: relative; top:20px; color:ghostwhite;"> REGISTRATION </h1>
         <input type="text" class="box" style="position: relative; top:20px;" name="Name" id="Name" placeholder="Name"><br>
@@ -278,12 +278,12 @@
             </select>
         </div>
 
-        <input class="box" type="email" name="email" id="email" placeholder="Email" required>
+        <input class="box" type="email" name="email" name="email" placeholder="Email" required>
 
-        <input class="box" type="Password" name="Password" id="p1" placeholder="Password">
+        <input class="box" type="Password" name="Password" name="p1" placeholder="Password">
         <span id="message" style="color:red"> </span>
 
-        <input class="box" type="Password" name="confirm password" id="p2" placeholder="Confirm Password" required>
+        <input class="box" type="Password" name="confirm password" name="p2" placeholder="Confirm Password">
 
         <div style="position:relative; top: 30px;">
 
@@ -315,7 +315,7 @@
 
 
 
-        <button type="submit" name="Submit" value="Submit" onclick="Validateform()">Sign Up</button>
+        <button type="submit" name="Submit" value="Submit">Sign Up</button>
     </form>
 </body>
 </html>
